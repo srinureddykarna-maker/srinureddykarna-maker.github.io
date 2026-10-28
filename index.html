@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karna Srinivasulu Reddy – Aspiring Software Developer | Java, Backend, Machine Learning</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%92%BB%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Portfolio of Karna Srinivasulu Reddy: Java and Python, a FastAPI + PostgreSQL REST API, a CNN plant-disease classifier, 200+ LeetCode problems.">
+<style>
+:root{
+  --bg:#0a1220; --bg2:#0d1728; --card:#111d31; --line:#1f3150; --fg:#e6edf7; --muted:#93a4bd; --accent:#5eb6ff; --accent-ink:#06121f;
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:rgba(10,18,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{font-weight:700;font-size:1.15rem;letter-spacing:.02em;color:var(--fg);text-decoration:none}
+.links{display:flex;gap:2px;align-items:center}
+.links a.l{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:6px;font-size:.92rem}
+.links a.l:hover{color:var(--fg);background:var(--card)}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:1.5px solid var(--accent);color:var(--accent);background:transparent;font:inherit;font-weight:600;text-decoration:none;cursor:pointer;transition:background .15s,transform .15s}
+.btn:hover{background:rgba(94,182,255,.12);transform:translateY(-1px)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{background:#86c8ff}
+.btn.sm{padding:7px 12px;font-size:.88rem}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--fg);border-radius:8px;padding:8px 12px;font:inherit}
+@media (max-width:900px){
+  .menu{display:block}
+  .links{display:none;position:absolute;top:calc(60px + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg2);border-bottom:1px solid var(--line);padding:10px 20px 16px}
+  .links.open{display:flex}
+  .links a.l{padding:12px 8px}
+}
+section{padding:72px 0 8px}
+.hero{padding-top:calc(130px + env(safe-area-inset-top,0px));padding-bottom:24px}
+.hero .wrap{display:grid;gap:36px;grid-template-columns:1fr;align-items:center}
+@media (min-width:860px){.hero .wrap{grid-template-columns:1.15fr 1fr}}
+h1{font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.08;letter-spacing:-.025em;margin:0 0 10px}
+h2{font-size:1.7rem;letter-spacing:-.015em;margin:0 0 6px}
+h3{font-size:1.1rem;margin:0 0 6px}
+p{margin:0 0 12px}
+.role{font-size:1.25rem;color:var(--muted);margin-bottom:14px;min-height:1.8em}
+.role b{color:var(--accent);font-weight:600}
+.cursor{display:inline-block;width:2px;height:1.1em;background:var(--accent);vertical-align:-.15em;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{max-width:56ch;color:var(--muted)}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.code{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font:.88rem/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#c8d6ea;overflow-x:auto;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.code .d{display:flex;gap:6px;margin-bottom:10px}
+.code .d i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.k{color:var(--accent)} .s{color:#9ad9a8}
+.sub{color:var(--muted);margin-bottom:22px;max-width:62ch}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card small{display:block;color:var(--muted);font-size:.85rem;margin-bottom:2px}
+.card strong{font-size:1.02rem}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.badge{border:1px solid var(--line);background:var(--bg2);color:var(--fg);border-radius:999px;padding:4px 12px;font-size:.88rem}
+.proj{display:grid;gap:0;grid-template-columns:1fr;padding:0;overflow:hidden;margin-bottom:18px}
+@media (min-width:800px){.proj{grid-template-columns:240px 1fr}}
+.art{background:var(--bg2);display:grid;place-items:center;padding:26px;border-bottom:1px solid var(--line)}
+@media (min-width:800px){.art{border-bottom:0;border-right:1px solid var(--line)}}
+.proj .body{padding:22px}
+.proj ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+.proj li{margin:3px 0}
+.note{font-size:.85rem;color:var(--muted);margin-top:12px}
+.tl{position:relative;margin:0;padding:0 0 0 26px;list-style:none;border-left:2px solid var(--line)}
+.tl li{position:relative;margin-bottom:18px}
+.tl li::before{content:"";position:absolute;left:-33px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.tl .when{color:var(--accent);font-size:.9rem;font-weight:600}
+.stat{font-size:2rem;font-weight:700;color:var(--accent);line-height:1.1}
+form{display:grid;gap:12px}
+label{display:grid;gap:5px;font-size:.92rem;color:var(--muted)}
+input,textarea{background:var(--bg2);border:1px solid var(--line);border-radius:8px;color:var(--fg);padding:11px 12px;font:inherit;width:100%}
+textarea{min-height:130px;resize:vertical}
+.two{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:860px){.two{grid-template-columns:1fr 1.2fr}}
+#status{min-height:1.4em;font-size:.92rem;color:var(--muted)}
+footer{margin-top:64px;padding:24px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:no-preference){.hero .wrap>*{animation:rise .6s ease both}.hero .wrap>*:nth-child(2){animation-delay:.12s}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home" data-go="home">KSR</a>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+    <nav class="links" id="links" aria-label="Main">
+      <a class="l" href="#home" data-go="home">Home</a>
+      <a class="l" href="#about" data-go="about">About</a>
+      <a class="l" href="#skills" data-go="skills">Skills</a>
+      <a class="l" href="#projects" data-go="projects">Projects</a>
+      <a class="l" href="#education" data-go="education">Education</a>
+      <a class="l" href="#certifications" data-go="certifications">Certifications</a>
+      <a class="l" href="#achievements" data-go="achievements">Achievements</a>
+      <a class="l" href="#contact" data-go="contact">Contact</a>
+      <a class="btn sm" href="#" data-resume>Download Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <h1>Hi, I’m Karna Srinivasulu Reddy</h1>
+      <div class="role" aria-live="off"><b id="typed">Aspiring Software Developer</b><span class="cursor" aria-hidden="true"></span></div>
+      <p class="lead">I work with Java, Python and SQL, build REST APIs with FastAPI, and train machine-learning models. I’m a B.Tech student looking for my first software engineering role.</p>
+      <div class="row">
+        <a class="btn primary" href="#projects" data-go="projects">Explore My Projects</a>
+        <a class="btn" href="#" data-resume>Download Resume</a>
+        <a class="btn" href="#contact" data-go="contact">Contact Me</a>
+      </div>
+      <div class="row">
+        <a class="btn sm" href="https://github.com/srinureddykarna-maker">GitHub</a>
+        <a class="btn sm" href="https://www.linkedin.com/in/karna-srinivasulu-reddy/">LinkedIn</a>
+        <a class="btn sm" href="https://leetcode.com/u/R3Mj0XLPbI/">LeetCode</a>
+      </div>
+    </div>
+    <div class="code" aria-hidden="true">
+      <div class="d"><i></i><i></i><i></i></div>
+      <div><span class="k">developer</span> = {</div>
+      <div>&nbsp;&nbsp;<span class="k">name</span>: <span class="s">"Karna Srinivasulu Reddy"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="k">languages</span>: [<span class="s">"Java"</span>, <span class="s">"Python"</span>, <span class="s">"SQL"</span>],</div>
+      <div>&nbsp;&nbsp;<span class="k">backend</span>: [<span class="s">"FastAPI"</span>, <span class="s">"PostgreSQL"</span>],</div>
+      <div>&nbsp;&nbsp;<span class="k">ml</span>: [<span class="s">"CNN"</span>, <span class="s">"TensorFlow/Keras"</span>],</div>
+      <div>&nbsp;&nbsp;<span class="k">leetcode</span>: <span class="s">"200+ solved"</span>,</div>
+      <div>&nbsp;&nbsp;<span class="k">graduating</span>: <span class="s">2027</span></div>
+      <div>}</div>
+    </div>
+  </div>
+</section>
+
+<section id="about"><div class="wrap">
+  <h2>About me</h2>
+  <p class="sub">I’m Karna Srinivasulu Reddy, an aspiring software developer currently pursuing a B.Tech in Electronics &amp; Communication Engineering. I work with Java, Python, SQL, backend frameworks, and machine learning tools. I enjoy building practical applications, exploring predictive models, solving algorithmic problems, and improving my software development skills through consistent practice.</p>
+  <div class="grid">
+    <div class="card"><small>Education</small><strong>B.Tech, 2023–2027</strong></div>
+    <div class="card"><small>Primary languages</small><strong>Java, Python, SQL</strong></div>
+    <div class="card"><small>Main interests</small><strong>Software development, backend engineering, machine learning</strong></div>
+    <div class="card"><small>Problem-solving</small><strong>200+ LeetCode problems solved</strong></div>
+    <div class="card"><small>Location</small><strong>Vijayawada, Andhra Pradesh, India</strong></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Technical skills</h2>
+  <p class="sub">Listed as on my resume, grouped by area. No ratings, just what I work with.</p>
+  <div class="grid">
+    <div class="card"><h3>Programming languages</h3><div class="badges"><span class="badge">Java</span><span class="badge">Python</span><span class="badge">SQL</span></div></div>
+    <div class="card"><h3>Frameworks and backend</h3><div class="badges"><span class="badge">Spring Framework</span><span class="badge">Spring Boot</span><span class="badge">Hibernate</span><span class="badge">JDBC</span><span class="badge">FastAPI</span></div></div>
+    <div class="card"><h3>Core computer science</h3><div class="badges"><span class="badge">Data Structures</span><span class="badge">Algorithms</span><span class="badge">OOP</span><span class="badge">DBMS</span><span class="badge">Collections Framework</span></div></div>
+    <div class="card"><h3>Machine learning</h3><div class="badges"><span class="badge">Data Preprocessing</span><span class="badge">Feature Engineering</span><span class="badge">Classification</span><span class="badge">Regression</span><span class="badge">Clustering</span><span class="badge">PCA</span></div></div>
+    <div class="card"><h3>Tools and libraries</h3><div class="badges"><span class="badge">MySQL</span><span class="badge">Pandas</span><span class="badge">NumPy</span><span class="badge">Git</span><span class="badge">GitHub</span></div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Featured projects</h2>
+  <p class="sub">Two projects from my resume, with source code on GitHub.</p>
+
+  <article class="card proj">
+    <div class="art" aria-hidden="true">
+      <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#5eb6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 98C22 50 50 22 98 22c0 48-28 76-76 76z"/><path d="M22 98L70 50"/><path d="M52 68h20M62 58v20" opacity=".5"/></svg>
+    </div>
+    <div class="body">
+      <h3>Potato Disease Prediction</h3>
+      <p>Built a convolutional neural network to classify potato leaves into Early Blight, Late Blight, or Healthy categories using the PlantVillage dataset.</p>
+      <ul>
+        <li>Image classification using a CNN</li>
+        <li>tf.data pipeline with an 80/10/10 data split</li>
+        <li>Images resized to 224 × 224 with prefetching</li>
+        <li>Single-image inference that outputs the predicted disease and a confidence score</li>
+      </ul>
+      <div class="badges"><span class="badge">Python</span><span class="badge">TensorFlow/Keras</span><span class="badge">NumPy</span><span class="badge">Matplotlib</span></div>
+      <div class="row"><a class="btn sm" href="https://github.com/srinureddykarna-maker/POTATO-DISEASE-PREDICTION">View Source Code</a></div>
+    </div>
+  </article>
+
+  <article class="card proj">
+    <div class="art" aria-hidden="true">
+      <svg width="120" height="120" viewBox="0 0 120 120" fill="none" stroke="#5eb6ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="60" cy="28" rx="34" ry="12"/><path d="M26 28v28c0 7 15 12 34 12s34-5 34-12V28"/><path d="M26 56v28c0 7 15 12 34 12s34-5 34-12V56"/></svg>
+    </div>
+    <div class="body">
+      <h3>Product Inventory REST API</h3>
+      <p>Built a REST API with CRUD operations for managing products, using Pydantic for request validation and SQLAlchemy ORM to store data in PostgreSQL.</p>
+      <ul>
+        <li>Create, read, update and delete product records</li>
+        <li>Request validation with Pydantic</li>
+        <li>PostgreSQL integration through the SQLAlchemy ORM</li>
+        <li>Endpoints tested with Swagger UI and integrated with a frontend</li>
+      </ul>
+      <div class="badges"><span class="badge">FastAPI</span><span class="badge">PostgreSQL</span><span class="badge">SQLAlchemy</span><span class="badge">Pydantic</span></div>
+      <div class="row"><a class="btn sm" href="https://github.com/srinureddykarna-maker/FastAPI">View Source Code</a></div>
+    </div>
+  </article>
+  <p class="note">No live demos yet. When a project is deployed, its link will appear here.</p>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <p class="sub">&nbsp;</p>
+  <ul class="tl">
+    <li><span class="when">2023–2027</span><h3>B.Tech in Electronics &amp; Communication Engineering</h3><p>Prasad V. Potluri Siddhartha Institute of Technology · CGPA 7.42/10</p></li>
+    <li><span class="when">2021–2023</span><h3>Intermediate (MPC)</h3><p>Narayana Jr College · Score 92.4</p></li>
+    <li><span class="when">2020–2021</span><h3>Board of Secondary Education</h3><p>Aravinda High School · Score 95.5</p></li>
+  </ul>
+</div></section>
+
+<section id="certifications"><div class="wrap">
+  <h2>Certifications</h2>
+  <p class="sub">Credential links will be added when available.</p>
+  <div class="grid">
+    <div class="card"><strong>Microsoft Azure AI Essentials</strong><small>Professional Certificate · Microsoft · 2026</small></div>
+    <div class="card"><strong>Java (Basic)</strong><small>HackerRank · 2026</small></div>
+    <div class="card"><strong>Python (Basic)</strong><small>HackerRank · 2026</small></div>
+    <div class="card"><strong>LLM Fundamentals</strong><small>Hugging Face · 2026</small></div>
+  </div>
+</div></section>
+
+<section id="achievements"><div class="wrap">
+  <h2>Coding profiles</h2>
+  <p class="sub">Problem-solving practice, mostly in Java.</p>
+  <div class="grid">
+    <div class="card"><div class="stat">200+</div><strong>LeetCode problems solved</strong><p class="note">Includes the 100-Day Streak Badge.</p><a class="btn sm" href="https://leetcode.com/u/R3Mj0XLPbI/">Open profile</a></div>
+    <div class="card"><div class="stat">100+</div><strong>GeeksforGeeks problems solved</strong><p class="note">&nbsp;</p><a class="btn sm" href="https://www.geeksforgeeks.org/profile/srinuredjltg?tab=activity">Open profile</a></div>
+  </div>
+  <h2 style="margin-top:40px">Achievements and activities</h2>
+  <p class="sub">&nbsp;</p>
+  <div class="grid">
+    <div class="card"><strong>AI/ML workshop at IIT Hyderabad</strong><small>Participated in a technical workshop</small></div>
+    <div class="card"><strong>LeetCode 100-Day Streak Badge</strong><small>Earned</small></div>
+    <div class="card"><strong>Sports and quizzes</strong><small>Participated</small></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Let’s talk</h2>
+  <p class="sub">I’m looking for internships and fresher roles in software development. If my work fits what you’re hiring for, send me a message.</p>
+  <div class="two">
+    <div>
+      <div class="card" style="margin-bottom:12px"><small>Email</small><strong><a href="mailto:srinureddykarna@gmail.com">srinureddykarna@gmail.com</a></strong></div>
+      <div class="card" style="margin-bottom:12px"><small>Phone</small><strong>+91 99495 46811</strong></div>
+      <div class="card"><small>Location</small><strong>Vijayawada, Andhra Pradesh, India</strong></div>
+    </div>
+    <form id="form" novalidate>
+      <label>Name<input id="n" name="name" autocomplete="name" required></label>
+      <label>Email<input id="e" name="email" type="email" autocomplete="email" required></label>
+      <label>Subject<input id="s" name="subject" required></label>
+      <label>Message<textarea id="m" name="message" required></textarea></label>
+      <button class="btn primary" type="submit">Open in my email app</button>
+      <div id="status" role="status"></div>
+    </form>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Karna Srinivasulu Reddy. Built from my resume.</div></footer>
+
+<script>
+(function(){
+  // Edit these when you have real links. Leave RESUME_URL empty to use resume.pdf in the same folder.
+  var CONFIG = { RESUME_URL: "", EMAIL: "srinureddykarna@gmail.com" };
+
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function go(id){var el=document.getElementById(id);if(el){el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});}}
+  document.querySelectorAll("[data-go]").forEach(function(a){
+    a.addEventListener("click",function(ev){ev.preventDefault();go(a.getAttribute("data-go"));closeMenu();});
+  });
+
+  var menu=document.getElementById("menu"),links=document.getElementById("links");
+  function closeMenu(){links.classList.remove("open");menu.setAttribute("aria-expanded","false");}
+  menu.addEventListener("click",function(){var o=links.classList.toggle("open");menu.setAttribute("aria-expanded",String(o));});
+
+  var resumeOk=false, RESUME=CONFIG.RESUME_URL||"resume.pdf";
+  fetch(RESUME,{method:"HEAD"}).then(function(r){resumeOk=r.ok;}).catch(function(){});
+  document.querySelectorAll("[data-resume]").forEach(function(a){
+    a.addEventListener("click",function(ev){
+      if(resumeOk||CONFIG.RESUME_URL){a.href=RESUME;a.target="_blank";a.rel="noopener";return;}
+      ev.preventDefault();
+      alert("The resume file is not on this site yet. Add resume.pdf next to index.html, or email "+CONFIG.EMAIL+" to request it.");
+    });
+  });
+
+  var phrases=["Aspiring Software Developer","Java & Backend Development","Python & Machine Learning"];
+  var t=document.getElementById("typed");
+  if(!reduce){
+    var p=0,c=0,del=false;
+    (function tick(){
+      var w=phrases[p];
+      t.textContent=w.slice(0,c);
+      if(!del&&c===w.length){del=true;return setTimeout(tick,1800);}
+      if(del&&c===0){del=false;p=(p+1)%phrases.length;}
+      c+=del?-1:1;
+      setTimeout(tick,del?35:70);
+    })();
+  }
+
+  var form=document.getElementById("form"),st=document.getElementById("status");
+  form.addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var n=form.name.value.trim(),e=form.email.value.trim(),s=form.subject.value.trim(),m=form.message.value.trim();
+    if(!n||!s||!m||!/^\S+@\S+\.\S+$/.test(e)){st.textContent="Please fill every field and enter a valid email address.";st.style.color="#ff8a8a";return;}
+    var body=m+"\n\nFrom: "+n+" ("+e+")";
+    var url="mailto:"+CONFIG.EMAIL+"?subject="+encodeURIComponent(s)+"&body="+encodeURIComponent(body);
+    st.style.color="";
+    st.textContent="Opening your email app. Nothing is sent until you press send there. If nothing opens, write to "+CONFIG.EMAIL+" directly.";
+    window.open(url,"_top");
+  });
+})();
+</script>
+</body>
+</html>
